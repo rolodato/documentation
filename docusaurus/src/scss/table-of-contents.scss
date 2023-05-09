@@ -1,18 +1,14 @@
 /** Component: Table of Contents */
 
 .table-of-contents {
-  --custom-toc-py: var(--strapi-spacing-1);
-  --custom-toc-items-py: var(--strapi-spacing-0);
+  --custom-table-of-contents-font-size: var(--strapi-font-size-sm);
+  --custom-table-of-contents-line-height: 1.25;
 
-  --ifm-toc-padding-vertical: var(--custom-toc-py);
+  --ifm-toc-padding-vertical: var(--strapi-spacing-1);
+  --ifm-toc-padding-horizontal: var(--strapi-spacing-2);
 
-  font-size: var(--strapi-font-size-xs);
-
-  > li {
-    margin: 0 var(--ifm-toc-padding-horizontal);
-    padding-top: var(--custom-toc-items-py);
-    padding-bottom: var(--custom-toc-items-py);
-  }
+  font-size: var(--custom-table-of-contents-font-size);
+  line-height: var(--custom-table-of-contents-line-height);
 
   &__link {
     --custom-table-of-contents-link-active-before-left: -16px;
@@ -57,12 +53,5 @@
       max-width: 22px;
       margin-right: 2px;
     }
-  }
-}
-
-/** Responsive */
-@include medium-up {
-  .table-of-contents {
-    --custom-toc-items-py: var(--strapi-spacing-2);
   }
 }
